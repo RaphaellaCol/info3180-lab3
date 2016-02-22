@@ -1,0 +1,54 @@
+
+{% extends "base.html" %}
+
+
+{% block js %}
+{% endblock %}
+
+{% block main %}
+<style>
+h1{
+  font-family: courier,serif;
+  font-weight:bold;
+}
+ #content{ border: solid 2px;
+          background-color: #FAEFAF;
+          font-size: 120%;
+          padding:10px;
+          width:550px;
+          margin:20px;
+          font-family:sans-serif;
+          }
+ #title{
+   font-weight:bold;
+ } 
+  
+  
+  
+  
+</style>
+
+
+
+<div id='content'>
+<h1>Contact Form</h1>
+Fill in this form to contact the site owners.<br>
+<form method="POST" action='/contact'>
+<p id='title'>Name<br></p>
+Please enter your full name<br>
+<input type="text" name="names"/><br>
+
+<p id='title'>E-Mail<br></p>
+Please enter your e-mail address<br>
+<input type="text" name="email"/><br>
+
+<p id='title'>Subject<br></p>
+<input type="text" name="subj"/><br>
+
+<p id='title'>Message<br></p>
+Please enter the message you want to send<br>
+<textarea name="msg" rows="10" cols="50" ></textarea>
+<br><br>
+
+<input type="submit" value="Send"/>
+{% endblock %}
